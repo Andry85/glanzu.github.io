@@ -1,0 +1,10 @@
+$bg-color			:#e1c298;
+$text-color			:#485059;
+$link-color			:#007fbc;
+$link-color-hover	:#007fbc;
+$placeholder-color	:#bfb6b2;
+
+@mixin border-radius($radius) {
+          border-radius: $radius;
+}
+

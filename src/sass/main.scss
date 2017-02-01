@@ -1,0 +1,77 @@
+@import "variables";
+@import "reset";
+
+
+
+
+body {
+	background: $bg-color url(../img/body-bg.png);
+	font: {
+	    family: 'PTSans-Regular', sans-serif;
+	    size: 16px;
+	  }
+	color: $text-color;
+}
+
+
+.wrapper {
+	max-width: 1334px;
+	margin: 0 auto;
+	background: #fff;
+	min-height: 1200px;
+	box-shadow: 0 0 60px 5px rgba(0,0,0,0.35);
+
+}
+.inner {
+	&:before,&:after {content: ""; display: table;}
+	&:after {clear: both;}
+}
+
+.header {
+	background: #626b74;
+	min-height: 43px;
+	width: 1334px;
+	position: fixed;
+	left: 50%;
+	top: 0;
+	z-index: 10;
+	margin-left: -667px;
+	&__col1 {
+		float: left;
+	}
+}
+a.logo {
+	display: block;
+	background: url(../img/mx.png) no-repeat;
+	width: 123px;
+	height: 27px;
+	text-indent: -9000px;
+	overflow: hidden;
+	text-decoration: none;
+	margin: 7px 0 0 20px;
+	&:hover {
+		background-position: 0 -100px;
+	}
+}
+
+
+
+
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), 
+only screen and (min--moz-device-pixel-ratio: 1.5), 
+only screen and (min-device-pixel-ratio: 1.5) {
+	body {
+		background-image: url(../img/body-bg@2x.png);
+		background-size: 203px 317px;
+	}
+	a.logo {
+		background-image: url(../img/mx@2x.png);
+		background-size: 600px 600px;
+		&:hover {
+			background-position: 0 -50px;
+		}
+	}
+	    
+}
+
