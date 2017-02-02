@@ -6,6 +6,7 @@
 
 body {
 	background: $bg-color url(../img/body-bg.png);
+	background-attachment: fixed;
 	font: {
 	    family: 'PTSans-Regular', sans-serif;
 	    size: 16px;
@@ -28,8 +29,7 @@ body {
 }
 
 .header {
-	background: #626b74;
-	min-height: 43px;
+	background: #626b74 url(../img/header_bg.png) no-repeat;
 	width: 1334px;
 	position: fixed;
 	left: 50%;
@@ -37,7 +37,32 @@ body {
 	z-index: 10;
 	margin-left: -667px;
 	&__col1 {
+		background: #626b74;
 		float: left;
+		min-height: 43px;
+		padding: 0 43px 0 0;
+	}
+	&__col2 {
+		background: url(../img/header_bg.png) 0 -43px no-repeat;
+		float: left;
+		min-height: 43px;
+		padding: 0 27px 0 34px;
+		margin-left: -37px;
+	}
+	&__col3 {
+		background: url(../img/header_bg.png) 0 -86px no-repeat;
+		float: left;
+		min-height: 43px;
+		padding: 0 39px 0 34px;
+		margin-left: -37px;
+	}
+	&__col4 {
+		background: url(../img/header_bg.png) 0 -129px no-repeat;
+		float: left;
+		min-height: 43px;
+		padding: 0 0 0 34px;
+		margin-left: -37px;
+
 	}
 }
 a.logo {
@@ -54,6 +79,189 @@ a.logo {
 	}
 }
 
+.nav {
+	&__list {}
+	&__item {
+		float: left;
+		padding: 9px 17px;
+		position: relarive;
+	}
+	&__link {
+		color: #e9eaeb!important;
+		line-height: 25px;
+
+	}
+	&__item--activ {
+		.nav__link {color: #9fe09f!important;}
+	}
+	&__item--hasSub {
+		.nav__link {
+			&:after  {
+				content: '';
+				background: url(../img/mx.png) -200px 0 no-repeat;
+				width: 7px;
+				height: 4px;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				top: 2px;
+				margin: 0 -4px 0 5px;
+			}
+			&:before  {
+				content: '';
+				display: inline-block;
+				min-height: inherit;
+				height: 100%;
+				vertical-align: middle;
+			}
+		}
+	}
+}
+
+.languages {
+	float: left;
+	&__item {
+		padding: 9px 0 0 18px;
+	}
+	&__link {
+		&:after  {
+				content: '';
+				background: url(../img/mx.png) -200px 0 no-repeat;
+				width: 7px;
+				height: 4px;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				top: 4px;
+				margin: 0 -4px 0 2px;
+		}
+		&:before  {
+				content: '';
+				display: inline-block;
+				min-height: inherit;
+				height: 100%;
+				vertical-align: middle;
+		}
+	}
+}
+
+.flag {
+	background: url(../img/mx.png);
+	width: 23px;
+	height: 17px;
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+}
+.flag-ru {
+	background-position: -300px 0;
+}
+
+.currencies {
+	float: left;
+	&__item {
+		position: relative;
+		padding: 11px 0 0 0;
+		margin: 0 0 0 12px;
+		min-height: 43px;
+	}
+	&__link {
+		color: #f8f8f8!important;
+		text-decoration: none!important;
+		text-transform: uppercase;
+		padding: 0 19px 0 21px;
+		&:after  {
+				content: '';
+				background: url(../img/mx.png) -200px 0 no-repeat;
+				width: 7px;
+				height: 4px;
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				top: 2px;
+				margin: 0 -4px 0 5px;
+		}
+		&:before  {
+				content: '';
+				display: inline-block;
+				min-height: inherit;
+				height: 100%;
+				vertical-align: middle;
+		}
+	}
+	&__sub {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 38px;
+		padding: 8px 0 10px 0;
+		background: #fff;
+		box-shadow: 0 0 15px -5px rgba(0,0,0,0.35);
+		display: none;
+	}
+	&__subItem {
+		padding: 13px 0;
+	}
+	&__subLink {
+		color: #495059!important;
+		text-transform: uppercase;
+		text-align: center;
+		display: block;
+	}
+}
+
+.search {
+	float: left;
+	&__icon {
+		background: url(../img/svgicons/search.svg) no-repeat;
+		width: 22px;
+		height: 22px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		margin: 11px 0 0 23px;
+	}
+}
+.cart {
+	float: left;
+	&__icon {
+		background: url(../img/svgicons/cart.svg) no-repeat;
+		width: 25px;
+		height: 23px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		margin: 10px 0 0 48px;
+	}
+	&__count {
+		display: inline-block;
+		vertical-align: middle;
+		background: #f8679a;
+		@include border-radius(50%);
+		text-align: center;
+		width: 25px;
+		height: 25px;
+		line-height: 25px;
+		color: #fff;
+		margin: 0 0 0 -1px;
+		position: relative;
+		top: 5px;
+
+	}
+}
+
+.profile {
+	float: left;
+	&__icon {
+		background: url(../img/svgicons/profile.svg) no-repeat;
+		width: 22px;
+		height: 23px;
+		display: inline-block;
+		vertical-align: middle;
+		cursor: pointer;
+		margin: 10px 0 0 20px;
+	}
+}
 
 
 

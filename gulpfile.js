@@ -38,7 +38,7 @@ gulp.task('sprites', function () {
 
 
 
-gulp.task('watch', ['browserSync', 'sass', /*'sprites'*/], function(){
+gulp.task('watch', ['browserSync', 'sass', 'sprites'], function(){
   gulp.watch('src/sass/**/*.scss', ['sass']); 
   // Обновляем браузер при любых изменениях в HTML или JS
   gulp.watch('src/*.html', browserSync.reload); 
@@ -59,7 +59,7 @@ gulp.task('useref', function () {
     return gulp.src(['src/*.html', 'src/*.php'])
     	.pipe(useref())
     	// Минифицируем только CSS файлы
-    	 .pipe(gulpIf('*.css', minifyCSS()))
+    	//.pipe(gulpIf('*.css', minifyCSS()))
 	    // Uglifies only if it's a Javascript file
 	    .pipe(gulpIf('*.js', uglify()))
         .pipe(gulp.dest('dist'));
@@ -80,10 +80,6 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 });
 
-gulp.task('fancybox', function() {
-  return gulp.src('src/fancybox/**/*')
-  .pipe(gulp.dest('dist/fancybox'))
-});
 
 gulp.task('js', function() {
   return gulp.src('src/js/**/*')
@@ -102,6 +98,6 @@ gulp.task('default', function (callback) {
 
 
 gulp.task('build', function (callback) {
-  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'fancybox'], callback)
+  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts'], callback)
 });
 
