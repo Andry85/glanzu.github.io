@@ -1,14 +1,24 @@
 $(function() {
 
 	/*********************************************************/
-						/* START  */
+						/* START CURRENCIES DROP-DOWN LIST  */
 	/********************************************************/
-			$("#curr").click(function(event) {
+			$(".js--currencies").click(function(event) {
 			  event.preventDefault();
 			  $(this).next('ul').slideToggle("slow");
 			});
 	/*********************************************************/
-						/* END  */
+						/* END CURRENCIES DROP-DOWN LIST  */
+	/********************************************************/
+
+	/*********************************************************/
+						/* START CURRENCIES DROP-DOWN LIST  */
+	/********************************************************/
+			$(".js--search").click(function(event) {
+			  $(".js--searchForm").show("slow");
+			});
+	/*********************************************************/
+						/* END CURRENCIES DROP-DOWN LIST  */
 	/********************************************************/
 
 	

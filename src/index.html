@@ -63,7 +63,7 @@
 					</ul>
 					<ul class="currencies">
 						<li class="currencies__item">
-							<a id="curr" class="currencies__link" href="#" title="">RUB</a>
+							<a class="currencies__link js--currencies" href="#" title="">RUB</a>
 							<ul class="currencies__sub">
 								<li class="currencies__subItem">
 									<a class="currencies__subLink" href="#" title="">USD</a>
@@ -77,7 +77,13 @@
 				</div>
 				<div class="header__col4">
 					<div class="search">
-						<span class="search__icon"></span>
+						<span class="search__icon js--search"></span>
+						<div class="search__form js--searchForm">
+							<form method="post" action="#">
+								<input class="search__field" type="text" placeholder="Поиск">
+								<input class="search__zoom" type="submit" value="Search">
+							</form>
+						</div>
 					</div>
 					<div class="cart">
 						<span class="cart__icon"></span>
