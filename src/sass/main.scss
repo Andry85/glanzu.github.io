@@ -80,10 +80,10 @@ a.logo {
 }
 
 .nav {
-	overflow: hidden;
 	padding: 0 0 0 34px;
 	white-space: nowrap;
 	&__item {
+		position: relative;
 		padding: 9px 16px;
 		position: relarive;
 		display: inline-block;
@@ -94,6 +94,10 @@ a.logo {
 	&__link {
 		color: #e9eaeb!important;
 		line-height: 25px;
+		text-decoration: none!important;
+		&:hover {
+			color: #9fe09f!important;
+		}
 
 	}
 	&__link--curr {
@@ -114,7 +118,6 @@ a.logo {
 			vertical-align: middle;
 		}
 	}
-
 
 	&__item--activ {
 		.nav__link {color: #9fe09f!important;}
@@ -138,6 +141,27 @@ a.logo {
 		.rollMenu.activ {
 			.rollMenu__row {background: #9fe09f;}
 		}
+	}
+
+	&__sub {
+		position: absolute;
+		width: 100%;
+		left: 0;
+		top: 38px;
+		z-index: 100;
+		padding: 8px 0 10px 0;
+		background: #fff;
+		box-shadow: 0 0 15px -5px rgba(0,0,0,0.35);
+		display: none;
+	}
+	&__subItem {
+		padding: 13px 4px;
+	}
+	&__subLink {
+		color: #495059!important;
+		text-transform: uppercase;
+		text-align: center;
+		display: block;
 	}
 }
 
@@ -225,7 +249,7 @@ a.logo {
 		display: none;
 	}
 	&__subItem {
-		padding: 13px 0;
+		padding: 13px 4px;
 	}
 	&__subLink {
 		color: #495059!important;
@@ -341,7 +365,7 @@ a.logo {
 		}
 
 
-		.nav__link {float: left; margin: 7px 0 0 30px; position: relative; z-index: 2;}
+		.nav__link {float: left; margin: 7px 0 0 0; position: relative; z-index: 2;}
 		.languages {
 			margin-left: 17px;
 			position: relative; 
@@ -354,6 +378,8 @@ a.logo {
 			&__item {padding-top: 9px;}
 		}
 	}
+
+	.hidFirstChild {float: left; position: relative; margin: 0 0 0 30px;}
 
 
 

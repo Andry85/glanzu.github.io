@@ -3,7 +3,7 @@ $(function() {
 	/*********************************************************/
 						/* START CURRENCIES DROP-DOWN LIST  */
 	/********************************************************/
-			$(".js--currencies").click(function(event) {
+			$(".js--currencies,.nav__link--curr").click(function(event) {
 			  event.preventDefault();
 			  $(this).next('ul').slideToggle("slow");
 			});
@@ -25,10 +25,11 @@ $(function() {
 	/*********************************************************/
 						/* START CURRENCIES DROP-DOWN LIST  */
 	/********************************************************/
-        
         $('.header').append('<div class="hidMenu">');
         var hidM = $(".hidMenu");
-
+        $('.hidMenu').append('<div class="hidFirstChild">');
+        var hidMFirst = $(".hidFirstChild");
+        
         $(".js-roll").click(function() {
           $(this).toggleClass("activ");
           hidM.slideToggle("slow"); 
@@ -38,13 +39,14 @@ $(function() {
         function onResize() {
             var wiw = window.innerWidth;
             if(wiw > 1358) {
-            	$(".js-link").prependTo('.nav__item--hasSub');
+            	$(".js-link,.js-sub").prependTo('.nav__item--hasSub');
             	$(".languages,.currencies").appendTo('.header__col3');
             	hidM.hide();  
             	$(".js-roll").removeClass("activ");
             }
             else {
-               $(".js-link,.languages,.currencies").appendTo(hidM);
+            	$(".js-link,.js-sub").appendTo(hidMFirst);
+                $(".languages,.currencies").appendTo(hidM);
 
             }
         }
