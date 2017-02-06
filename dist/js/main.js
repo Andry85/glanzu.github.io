@@ -76,6 +76,36 @@ $(function() {
 						/* End CUSTOM SELECT  */
 	/********************************************************/ 
 
+
+	/*********************************************************/
+						/* START EXPLANATIONS  */
+	/********************************************************/
+			$(".js-explanations").click(function(event) {
+			  event.preventDefault();
+			  $(this).next('div.explanations').slideToggle("fast");
+			});
+	/*********************************************************/
+						/* END EXPLANATIONS  */
+	/********************************************************/
+
+	/*********************************************************/
+						/* START FOUND RESULT  */
+	/********************************************************/
+			$(".settingsList input").click(function() {
+			  if ($(this).prop("checked")) {
+			  	$(this).parent('.checkboxWrap').nextAll(".settingsList__popap").fadeIn("fast");
+			  }
+			   else {
+				$(this).parent('.checkboxWrap').nextAll(".settingsList__popap").fadeOut("fast");
+			}
+			});
+	/*********************************************************/
+						/* END FOUND RESULT  */
+	/********************************************************/
+
+
+	
+
 	
 
 
