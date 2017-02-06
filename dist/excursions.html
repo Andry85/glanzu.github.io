@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>index</title>
+<meta name="viewport" content="width=1124">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" href="css/main.css">
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	<!-- ===========================
+    WRAP SECTION
+    =========================== -->
+	<div class="wrapper">
+		<header class="header">
+			<div class="inner">
+				<div class="header__col1">
+					<a class="logo" href="index.html" title="">&nbsp;</a>
+				</div>
+				<div class="header__col2">
+					<nav class="nav">
+						<ul class="nav__list">
+							<li class="nav__item">
+								<a class="nav__link" href="#" title="">Турпакеты</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="hotels.html" title="">Отели</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="#" title="">Трансфер / Билеты</a>
+							</li>
+							<li class="nav__item nav__item--activ">
+								<a class="nav__link" href="excursions.html" title="">Экскурсии</a>
+							</li>
+							<li class="nav__item">
+								<a class="nav__link" href="#" title="">Медпрограммы</a>
+							</li>
+							<li class="nav__item nav__item--hasSub">
+								<a class="nav__link nav__link--curr js-link" href="#" title="">Информация</a>
+								<ul class="nav__sub js-sub">
+									<li class="nav__subItem">
+										<a class="nav__subLink" href="#" title="">1</a>
+									</li>
+									<li class="nav__subItem">
+										<a class="nav__subLink" href="#" title="">2</a>
+									</li>
+								</ul>
+								<div class="rollMenu js-roll">
+									<span class="rollMenu__row"></span>
+									<span class="rollMenu__row"></span>
+									<span class="rollMenu__row"></span>
+								</div>
+							</li>
+						</ul>	
+					</nav>
+				</div>
+				<div class="header__col3">
+					<ul class="languages">
+						<li class="languages__item">
+							<a class="languages__link" href="#" title="">
+								<span class="flag flag-ru"></span>
+							</a>
+						</li>
+					</ul>
+					<ul class="currencies">
+						<li class="currencies__item">
+							<a class="currencies__link js--currencies" href="#" title="">RUB</a>
+							<ul class="currencies__sub">
+								<li class="currencies__subItem">
+									<a class="currencies__subLink" href="#" title="">USD</a>
+								</li>
+								<li class="currencies__subItem">
+									<a class="currencies__subLink" href="#" title="">EUR</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="header__col4">
+					<div class="search">
+						<span class="search__icon js--search"></span>
+						<div class="search__form js--searchForm">
+							<form method="post" action="#">
+								<input class="search__field" type="text" placeholder="Поиск">
+								<input class="search__zoom" type="submit" value="Search">
+							</form>
+						</div>
+					</div>
+					<div class="cart">
+						<span class="cart__icon"></span>
+						<span class="cart__count">3</span>
+					</div>
+					<div class="profile">
+						<span class="profile__icon"></span>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- ===========================
+	    MAIN SECTION
+	    =========================== -->
+		<main class="main">
+			<aside class="sidebar">
+				<h1 class="sidebar__title">Экскурсии</h1>
+				<div class="filter">
+					<form method="post" action="#">
+						<div class="filter__location">
+							<div class="chosen-wrap">
+                                <select class="chosen-select">
+                                    <option selected value="0">Ко Чанг, Таиланд</option>
+                                    <option value="1">Атланта, Джорджия, США</option>
+                                    <option value="2">Атлантик-Сити, Нью-Джерси, США</option>
+                                    <option value="3">Атлон, Уэстмит, Ирландия</option>
+                                    <option value="4">Сан-Педро-де- Атакама, Антофагаста, Чили</option>
+                                    <option value="5">Международный аэропорт Стамбула имени Ататюрка, Стамбул, Мраморноморский регион, Турция</option>
+                                    <option value="6">Атланта</option>
+                                    <option value="7">Джорджия</option>
+                                    <option value="8">Уэстмит</option>
+                                    <option value="9">ан-Педро-де- Атакама</option>
+                                    <option value="10">Сан-Педро-де- Атакама</option>
+                                </select>
+                            </div>
+						</div>
+						<div class="calendar">
+							<div class="calendar__data">
+								<input class="calendar__field" type="text" value="03.02.17">
+								<img class="calendar__img" src="img/calendar.png" alt="" title="">
+							</div>
+							<div class="calendar__line">-</div>
+							<div class="calendar__data">
+								<input class="calendar__field" type="text" value="08.02.17">
+								<img class="calendar__img" src="img/calendar.png" alt="" title="">
+							</div>
+						</div>
+						<div class="filter__count">
+							<ul class="countList">
+								<li class="countList__item">
+									<p class="countList__text">Взрослых</p>
+									<div class="chosen-wrap">
+		                                <select class="chosen-select">
+		                                    <option selected value="0">1</option>
+		                                    <option value="1">2</option>
+		                                    <option value="2">3</option>
+		                                    <option value="3">4</option>
+		                                    <option value="4">5</option>
+		                                    <option value="5">6</option>
+		                                    <option value="6">7</option>
+		                                    <option value="7">8</option>
+		                                    <option value="8">9</option>
+		                                    <option value="9">10</option>   
+		                                </select>
+		                            </div>
+								</li>
+								<li class="countList__item">
+									<p class="countList__text">
+										<a href="#" title="">Детей</a>
+									</p>
+									<div class="chosen-wrap">
+		                                <select class="chosen-select">
+		                                    <option selected value="0">0</option>
+		                                    <option value="1">1</option>
+		                                    <option value="2">2</option>
+		                                    <option value="3">3</option>
+		                                    <option value="4">4</option>
+		                                    <option value="5">5</option>
+		                                    <option value="6">6</option>
+		                                    <option value="7">7</option>
+		                                    <option value="8">8</option>
+		                                    <option value="9">9</option>  
+		                                    <option value="10">10</option>   
+		                                </select>
+		                            </div>
+								</li>
+							</ul>
+						</div>
+						<div class="filter__results">
+							<div class="results">
+								<p class="results__items">Найдено <span class="results__counts">18</span></p>
+								<button class="bnt">Показать</button>
+							</div>
+						</div>
+						<div class="filter__search">
+							<div class="searchForm">
+								<button class="searchForm__btn"></button>
+								<input class="searchForm__field" type="text" placeholder="Ключевые слова (напр. „слоны“)" name="q" id="search" autocomplete="off" required>
+								<div id="tipue_drop_content"></div>
+							</div>
+						</div>
+						<div class="filter__settings">
+							<dl class="settingsList settingsList--noTitle">
+								<dt>&nbsp;</dt>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-0">
+                                        <label for="check-0">Обзорные</label>
+                                    </div>
+                                    <span class="settingsList__count">41</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-1">
+                                        <label for="check-1">Достопримечательности</label>
+                                    </div>
+                                    <span class="settingsList__count">8</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-2">
+                                        <label for="check-2">Частные</label>
+                                    </div>
+                                    <span class="settingsList__count">116</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-3">
+                                        <label for="check-3">Пешие туры</label>
+                                    </div>
+                                    <span class="settingsList__count">86</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-4">
+                                        <label for="check-4">Велотуры</label>
+                                    </div>
+                                    <span class="settingsList__count">207</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-5">
+                                        <label for="check-5">Еда и напитки</label>
+                                    </div>
+                                    <span class="settingsList__count">77</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-6">
+                                        <label for="check-6">Дневные</label>
+                                    </div>
+                                    <span class="settingsList__count">41</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-7">
+                                        <label for="check-7">Круизы</label>
+                                    </div>
+                                    <span class="settingsList__count">127</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-8">
+                                        <label for="check-8">Ночная жизнь</label>
+                                    </div>
+                                    <span class="settingsList__count">43</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-9">
+                                        <label for="check-9">Билеты на шоу и спорт</label>
+                                    </div>
+                                    <span class="settingsList__count">131</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-10">
+                                        <label for="check-10">Многодневные</label>
+                                    </div>
+                                    <span class="settingsList__count">133</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-11">
+                                        <label for="check-11">Приключения</label>
+                                    </div>
+                                    <span class="settingsList__count">82</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-12">
+                                        <label for="check-12">Спа</label>
+                                    </div>
+                                    <span class="settingsList__count">43</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-13">
+                                        <label for="check-13">Тематические парки</label>
+                                    </div>
+                                    <span class="settingsList__count">143</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-14">
+                                        <label for="check-14">Водные развлечения</label>
+                                    </div>
+                                    <span class="settingsList__count">133</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+								<dd>
+									<div class="checkboxWrap">
+                                        <input type="checkbox" class="checkbox" id="check-15">
+                                        <label for="check-15">Шоппинг</label>
+                                    </div>
+                                    <span class="settingsList__count">82</span>
+                                    <div class="settingsList__popap">
+                                    	<p>Найдено 17 <a href="#" title="">Показать</a></p>
+                                    </div>
+								</dd>
+							</dl>
+							
+						</div>
+					</form>
+				</div>	
+			</aside>	
+		</main><!-- MAIN SECTION END-->
+
+	</div><!-- WRAP SECTION END-->
+	<!-- ===========================
+    NECESSARY SCRIPTS
+    =========================== -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="js/libs.min.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/search_content.js"></script>
+</body>
+</html>

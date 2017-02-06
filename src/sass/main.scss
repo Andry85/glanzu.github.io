@@ -16,9 +16,9 @@ body {
 
 
 .wrapper {
-	width: 1334px;
+	width: 1335px;
 	margin: 0 auto;
-	background: #fff;
+	background: #f4f6f8;
 	box-shadow: 0 0 60px 5px rgba(0,0,0,0.35);
 
 }
@@ -29,12 +29,12 @@ body {
 
 .header {
 	background: #626b74 url(../img/header_bg.png) no-repeat;
-	width: 1334px;
+	width: 1335px;
 	position: fixed;
 	left: 50%;
 	top: 0;
 	z-index: 10;
-	margin-left: -667px;
+	margin-left: -667.5px;
 	&__col1 {
 		background: #626b74;
 		float: left;
@@ -384,18 +384,18 @@ a.logo {
 /* MAIN SECTION */
 .main {margin: 43px 0 0 0;}
 .sidebar {
+	border-right: 1px solid #d6d9de;
 	font-size: 15px;
-	background: #f9f9f9;
-	width: 310px;
+	width: 311px;
 	&__title {
 		margin: 0;
-		padding: 20px;
+		padding: 20px 20px 10px 20px;
 	}
 }
 
 .filter {
 	&__location {
-		padding: 0 10px 20px 10px;
+		padding: 10px;
 		.chosen-container-single {
 			.chosen-search {
 			 	&:before  {
@@ -426,20 +426,20 @@ a.logo {
 		}
 	}
 	&__count {
-		padding: 0 20px 20px 20px;
+		padding: 10px 20px;
 	}
 	&__price {
-		padding: 0 10px;
+		padding: 10px;
 	}
 	&__rating {
-		padding: 16px 10px 0 10px;
+		padding: 6px 10px 10px 10px;
 	}	
 	&__results {
-		padding: 0 20px 30px 20px;
+		padding: 10px 20px 30px 20px;
 	}	
 	&__search {
 		margin: 0 20px;
-		border: 1px solid #d6dadf;
+		border: 1px solid #d6d9de;
 		border-width: 1px 0;
 		padding: 30px 0;
 	}
@@ -449,7 +449,7 @@ a.logo {
 }
 
 .calendar {
-	padding: 0 20px 20px 20px;
+	padding: 10px 20px;
 	&:before,&:after {content: ""; display: table;}
 	&:after {clear: both;}
 	&__data {
@@ -476,6 +476,45 @@ a.logo {
 	}
 }
 
+
+.chosen-wrap  {position: relative;
+	&:before  {
+			  display: none;
+		      content: "";
+		      border: 1px solid #c4ccd5; 
+			  @include border-radius(2px);
+			  width: auto; 
+			  height: 34px;
+		      background: #fff url(../img/select-bg.png) no-repeat 96% 16px;
+		      margin: 0 10px -36px 10px;
+		      display: block;
+		      overflow: hidden;
+		    }
+	select {
+		width: 100%;
+		height: 34px;
+		padding: 0 24px;
+		color: #a0a3a7;
+		border: none;
+		box-shadow: none;
+		background-color: transparent;
+		background-image: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		option {
+			color: #a0a3a7;
+			font: {
+				family: 'PTSans-Regular', sans-serif;
+			    size: 15px;
+			}
+		}
+	}
+	select:focus {
+	    outline: none;
+	}
+}
+
 .countList {
 	&:before,&:after {content: ""; display: table;}
 	&:after {clear: both;}
@@ -493,6 +532,12 @@ a.logo {
 				.chosen-search {padding: 10px 4px;}
 			}
 			.chosen-container .chosen-results {margin: 0 4px 4px 0; padding-left: 4px;}
+			&:before  {
+		      margin-left: 0;
+		      margin-right: 0;
+		      background-position: 76% 16px;
+		    }
+		    select {padding: 0 14px;}
 		}
 	}
 	&__text {
@@ -502,6 +547,8 @@ a.logo {
 		padding: 6px 10px 0 0;
 		text-align: right;
 		font-size: 15px;
+		&>a {color: #495059; border-bottom: 1px dashed #a0a4a9;}
+		&>a:hover {text-decoration: none; border-bottom: 0;}
 	}
 }
 
@@ -522,26 +569,46 @@ a.logo {
 	background: #f8689a;
 	@include border-radius(3px);
 	color: #fff;
-	padding: 6px 21px 9px 21px;
+	padding: 6px 21px;
+	line-height: 1.48;
+	display:inline-block;
+	text-align:center;
+	font-size: 15px;
+	white-space:nowrap;
+	vertical-align:middle;
+	-ms-touch-action:manipulation;
+	touch-action:manipulation;
+	-webkit-user-select:none;
+	-moz-user-select:none;
+	-ms-user-select:none;
+	user-select:none;
+	background-image:none;
+	overflow: vissible;
 	&:hover {background: #da477b;}
 	&:disabled {background: #fdd1e1;}
 }
 
+
+
 .results {
 	&:before,&:after {content: ""; display: table;}
 	&:after {clear: both;}
-	padding: 20px 0 0 0;
 	&__items {
 		max-width: 50.74%;
 		float: left;
 		margin: 0;
 		padding: 8px 0 0 0;
 	}
+	&__counts {color: #e76c95;}
 	.bnt {float: right;}
 }
 
 .settingsList {
 	padding: 25px 0 9px 0;
+	&.settingsList--noTitle {
+		padding-top: 11px;
+		dt {height: 0; overflow: hidden;}
+	}
 	dt {
 		color: #8e9297;
 		font-weight: bold;
@@ -558,6 +625,7 @@ a.logo {
 		color: #8e9297;
 	}
 }
+
 
 .checkboxWrap {
 	position: relative;
@@ -598,7 +666,10 @@ a.logo {
 	&__field[type="text"] {
 		border: 0;
 		background: #dbdee3;
+		color: #7c7f82; 
+		font-size: 14px;
 	}
+	&__field[type="text"]::placeholder {color: #7c7f82;}
 	&__btn {
 		border: 0;
 		position: absolute;
@@ -621,24 +692,24 @@ a.logo {
 			top: 11px;
 	      
 	    }
-	  
-		
-	
-		
+	  		
 	}
 }
+
+
+// EXCURSIONS PAGE
 
 
 
 
 /* RESPONSIVE */
-@media only screen and (max-width: 1358px) {
-	.wrapper {width: 1000px;}
+@media only screen and (max-width: 1359px) {
+	.wrapper {width: 1024px;}
 
 
 	.header {
-		width: 1000px;
- 		margin-left: -500px;
+		width: 1024px;
+ 		margin-left: -512px;
  		background: #636b74;
 		&__col1 {
 			background: none;
@@ -713,6 +784,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 			background-position: -150px 0px;
 		}
 	}
-	    
+    
 }
 
