@@ -14,9 +14,9 @@ http://www.tipue.com/drop
      display: none;
      position: absolute;
      width: 100%;
-
 	z-index: 1000;
 }
+
 
 .tipue_drop_box 
 {
@@ -25,22 +25,10 @@ http://www.tipue.com/drop
 
 
 	box-shadow: 0 0 15px 1px rgba(0,0,0,0.2);
+     border-top: 0;
 }
 
-.tipue_drop_box:after
-{
-	border-bottom-color: #fff;
-	border-width: 8px;
-	left: 42px;
-	margin-left: -8px;
-}
-.tipue_drop_box:before 
-{
-	border-bottom-color: #dcdcdc;
-	border-width: 9px;
-	left: 42px;
-	margin-left: -9px;
-}
+
 
 #tipue_drop_wrapper
 {

@@ -528,7 +528,7 @@ a.logo {
 			width: 39.06%;
 			float: right;
 			.chosen-container-single {
-				.chosen-single {margin: 0; @include border-radius(3px);}
+				.chosen-single {margin: 0;}
 				.chosen-search {padding: 10px 4px;}
 			}
 			.chosen-container .chosen-results {margin: 0 4px 4px 0; padding-left: 4px;}
@@ -597,7 +597,7 @@ a.logo {
 
 .bnt {
 	border: 0;
-	background: #f8689a;
+	background: #da6797;
 	@include border-radius(3px);
 	color: #fff;
 	padding: 6px 21px;
@@ -615,8 +615,8 @@ a.logo {
 	user-select:none;
 	background-image:none;
 	overflow: vissible;
-	&:hover {background: #da477b;}
-	&:disabled {background: #fdd1e1;}
+	&:hover {background: #cc5b8a;}
+	&:disabled {background: #eccbdb;}
 }
 
 
@@ -719,17 +719,14 @@ a.logo {
 	position: relative;
 	@include border-radius(2px);
 	&:hover {
-		.searchForm__field[type="text"] {border-color: #999ea2;}
-		.searchForm__field[type="text"]::placeholder {color: #7c8083;}
-		.searchForm__btn {border-color: #999ea2;}
+		.searchForm__field {border-color: #999da0;}
+		.searchForm__btn {border-color: #999da0;}
 	}
 	&__field[type="text"] {
-		border: 1px solid #c4ccd5;
-		background: #fff;
-		color: #495059; 
 		font-size: 14px;
+		position: relative;
+		z-index: 1001;
 	}
-	&__field[type="text"]::placeholder {color: #8f9397;}
 	&__btn {
 		border: 1px solid #c4ccd5;
 		border-left: 0;
