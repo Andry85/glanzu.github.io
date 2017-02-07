@@ -42,7 +42,7 @@ $(function() {
             var wiw = window.innerWidth;
             if(wiw > 1358) {
             	$(".js-link,.js-sub").prependTo('.nav__item--hasSub');
-            	$(".languages,.currencies").appendTo('.header__col3');
+            	$(".languages,.currencies").prependTo('.header__col3');
             	hidM.hide();  
             	$(".js-roll").removeClass("activ");
             }
