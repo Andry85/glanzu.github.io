@@ -554,6 +554,7 @@ a.logo {
 
 .explanations {
 	display: none;
+	overflow: visible!important;
 	background: #f4f8fb;
 	width: 270px;
 	padding: 16px 18px;
@@ -714,36 +715,39 @@ a.logo {
 .star-default {background-position: -400px -21px;}
 
 .searchForm {
-	background: #dbdee3;
+	background: #fff;
 	position: relative;
 	@include border-radius(2px);
 	&:hover {
-		.searchForm__field[type="text"] {background: #c9cdd2;}
-		.searchForm__btn {
-			background: #c9cdd2;
-			background: #0097ad;
-	    	&:before {background-position: -210px -16px;}
-		}
+		.searchForm__field[type="text"] {border-color: #999ea2;}
+		.searchForm__field[type="text"]::placeholder {color: #7c8083;}
+		.searchForm__btn {border-color: #999ea2;}
 	}
 	&__field[type="text"] {
-		border: 0;
-		background: #dbdee3;
-		color: #7c7f82; 
+		border: 1px solid #c4ccd5;
+		background: #fff;
+		color: #495059; 
 		font-size: 14px;
 	}
-	&__field[type="text"]::placeholder {color: #7c7f82;}
+	&__field[type="text"]::placeholder {color: #8f9397;}
 	&__btn {
-		border: 0;
+		border: 1px solid #c4ccd5;
+		border-left: 0;
 		position: absolute;
 		right: 0;
 		top: 0;
 		width: 37px;
 		height: 36px;
-		background: #dbdee3;
+		background: #fff;
 		text-indent: -9000px;
 		overflow: hidden;
 		border-top-right-radius: 2px;
 		border-bottom-right-radius: 2px;
+		&:hover {
+			border-color: #0097ad!important; 
+			background: #0097ad;
+			&:before {background-position: -210px -16px;}
+		}
 		&:before  {
 			content: "";
 			background: url(../img/mx.png) -210px 0 no-repeat;

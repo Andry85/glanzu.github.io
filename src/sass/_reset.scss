@@ -27,7 +27,7 @@ header,footer,article,section,hgroup,nav,menu,aside,figure,main,video,address,pi
 h1, h2, h3, h4, h5, h6 {
 	margin: 15px 0;
 	line-height: 1.3;
-	color: #576069;
+	color: #5d6168;
 	font: {
 		family: 'GothamProNarrow-Bold', sans-serif;
 	    weight: normal; 
@@ -48,6 +48,7 @@ img{width:auto\9;height:auto;max-width:100%;vertical-align:middle;border:0;-ms-i
 
 
 ::placeholder {color: $placeholder-color;}
+
 
 /* --------------------- 
 INPUT FIELDS
@@ -73,4 +74,14 @@ textarea {
 	height: 36px;
 }
 textarea {resize: vertical;}
+
+input[type=text]:hover,
+input[type=password]:hover,
+input[type=url]:hover,
+input[type=tel]:hover,
+input[type=number]:hover,
+input[type=color]:hover,
+input[type=email]:hover,
+input[type=search]:hover,
+textarea:hover {border-color: #999da0;}
 
