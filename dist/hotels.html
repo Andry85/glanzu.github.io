@@ -150,8 +150,9 @@
 								</li>
 								<li class="countList__item">
 									<div class="countList__text">
-										<a class="js-explanations" href="#" title="">Детей</a>
+										<i class="countList__choose js-explanations">Детей</i>
 										<div class="explanations">
+											<i class="ex-cloze"></i>
 											<span>Туристы считаются детьми до 17 лет.  От 18 - взрослыми.</span>
 										</div>
 									</div>
@@ -208,20 +209,19 @@
 						</div>
 						<div class="filter__results">
 							<div class="results">
-								<p class="results__items">Найдено 1325</p>
 								<button disabled="disabled" class="bnt">Показать</button>
 							</div>
 						</div>
 						<div class="filter__search">
 							<div class="searchForm">
 								<button class="searchForm__btn"></button>
-								<input class="searchForm__field" type="text" placeholder="Название отеля" name="q" id="search" autocomplete="off" required>
+								<input class="searchForm__field" type="text" placeholder="Название отеля" name="q" id="search" autocomplete="off">
 								<div id="tipue_drop_content"></div>
 							</div>
 						</div>
 						<div class="filter__settings">
 							<dl class="settingsList">
-								<dt>Бронирование:</dt>
+								<dt>Бронирование</dt>
 								<dd>
 									<div class="checkboxWrap">
                                         <input type="checkbox" class="checkbox" id="check-0">
@@ -238,7 +238,7 @@
                                         <label for="check-1">Бронь без кредитной карты</label>
                                     </div>
                                     <span class="settingsList__count">8</span>
-                                    <div class="settingsList__popap noResult">
+                                    <div class="settingsList__popap">
                                     	<p>Ничего не найдено. Измените сочетание параметров</p>
                                     </div>
 								</dd>
@@ -254,7 +254,7 @@
 								</dd>
 							</dl>
 							<dl class="settingsList">
-								<dt>Популярное:</dt>
+								<dt>Популярное</dt>
 								<dd>
 									<div class="checkboxWrap">
                                         <input type="checkbox" class="checkbox" id="check-00">
@@ -307,7 +307,7 @@
 								</dd>
 							</dl>
 							<dl class="settingsList">
-								<dt>Удобства в номере:</dt>
+								<dt>Удобства в номере</dt>
 								<dd>
 									<div class="checkboxWrap">
                                         <input type="checkbox" class="checkbox" id="check-000">
@@ -360,9 +360,10 @@
 	<!-- ===========================
     NECESSARY SCRIPTS
     =========================== -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 	<script src="js/libs.min.js"></script>
 	<script src="js/tipuedrop.js"></script>
+	<script src="js/device.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/search_content.js"></script>
 </body>

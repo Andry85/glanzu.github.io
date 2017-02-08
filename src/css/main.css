@@ -104,6 +104,7 @@ input[type=email],
 input[type=search],
 textarea {
   background: #fff;
+  font-family: 'PTSans-Regular';
   font-size: 15px;
   border: 1px solid #c5cbd4;
   -webkit-border-radius: 2px;
@@ -154,7 +155,7 @@ body {
   position: fixed;
   left: 50%;
   top: 0;
-  z-index: 10;
+  z-index: 1100;
   margin-left: -667.5px; }
   .header__col1 {
     background: url(../img/header__col1-bg.png) no-repeat;
@@ -433,7 +434,7 @@ a.logo {
   padding: 10px; }
 
 .filter__rating {
-  padding: 6px 10px 10px 10px; }
+  padding: 8px 10px 10px 10px; }
 
 .filter__results {
   padding: 10px 20px 30px 20px; }
@@ -463,7 +464,7 @@ a.logo {
     float: left;
     color: #677887;
     text-align: center;
-    padding: 5px 0 0 0; }
+    padding: 7px 0 0 0; }
   .calendar__img {
     position: absolute;
     right: 12px;
@@ -525,7 +526,8 @@ a.logo {
     width: 39.06%;
     float: right; }
     .countList__item .chosen-wrap .chosen-container-single .chosen-single {
-      margin: 0; }
+      margin: 0;
+      padding-left: 12px; }
     .countList__item .chosen-wrap .chosen-container-single .chosen-search {
       padding: 10px 4px; }
     .countList__item .chosen-wrap .chosen-container .chosen-results {
@@ -542,15 +544,16 @@ a.logo {
   position: relative;
   width: 60.16%;
   float: left;
-  padding: 6px 10px 0 0;
+  padding: 7px 10px 0 0;
   text-align: right;
   font-size: 15px; }
-  .countList__text > a {
-    color: #495059;
-    border-bottom: 1px dashed #a0a4a9;
-    text-decoration: none; }
-  .countList__text > a:hover {
-    text-decoration: none;
+
+.countList__choose {
+  cursor: pointer;
+  color: #495059;
+  border-bottom: 1px dashed #a0a4a9;
+  font-style: normal; }
+  .countList__choose:hover {
     border-bottom: 0; }
 
 .explanations {
@@ -569,6 +572,15 @@ a.logo {
   .explanations span {
     display: block;
     line-height: 1.2; }
+  .explanations .ex-cloze {
+    display: none;
+    background: url(../img/svgicons/cloze.svg) no-repeat;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer; }
   .explanations:before {
     content: "";
     width: 34px;
@@ -578,6 +590,8 @@ a.logo {
     left: 50%;
     top: -22px;
     margin-left: -17px; }
+  .explanations.withCloze .ex-cloze {
+    display: block; }
 
 .rating {
   padding: 0 0 0 21px; }
@@ -586,10 +600,10 @@ a.logo {
     vertical-align: middle;
     padding: 0 0 0 11px; }
     .rating__item a {
-      color: #8e9297;
+      color: #4c5159;
       position: relative; }
     .rating__item a.rating__link--more {
-      top: 2px; }
+      top: 1px; }
 
 .bnt {
   border: 0;
@@ -597,7 +611,7 @@ a.logo {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   color: #fff;
-  padding: 6px 21px;
+  padding: 6px 16px;
   line-height: 1.48;
   display: inline-block;
   text-align: center;
@@ -656,15 +670,14 @@ a.logo {
     -webkit-box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
             box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
     position: absolute;
-    min-width: 192px;
+    white-space: nowrap;
     left: 254px;
     top: -18px;
     z-index: 100; }
-    .settingsList__popap.noResult {
-      min-width: 411px; }
     .settingsList__popap p {
       margin: 0; }
       .settingsList__popap p a {
+        text-decoration: none;
         border-bottom: 1px dashed; }
         .settingsList__popap p a:hover {
           text-decoration: none;
@@ -681,7 +694,7 @@ a.logo {
   .settingsList__count {
     position: absolute;
     right: 0;
-    top: 0;
+    top: -2px;
     color: #8e9297; }
 
 .checkboxWrap {
@@ -709,7 +722,7 @@ a.logo {
       height: 17px;
       position: absolute;
       left: 0;
-      top: 1px; }
+      top: 0px; }
     .checkboxWrap input:not(checked) + label:hover:before {
       background: url(../img/checkbox-small-bg-hover.png) no-repeat; }
     .checkboxWrap input:checked + label:before {
@@ -718,14 +731,14 @@ a.logo {
       background: url(../img/checkbox-small-checked-bg-hover.png) no-repeat; }
 
 .star {
-  background: url(../img/mx.png) -400px 0 no-repeat;
+  background: url(../img/svgicons/star.svg) no-repeat;
   width: 21px;
   height: 21px;
   display: inline-block;
   vertical-align: middle; }
 
 .star-default {
-  background-position: -400px -21px; }
+  background-image: url(../img/svgicons/star-default.svg); }
 
 .searchForm {
   background: #fff;
@@ -737,7 +750,6 @@ a.logo {
   .searchForm:hover .searchForm__btn {
     border-color: #999da0; }
   .searchForm__field[type="text"] {
-    font-size: 14px;
     position: relative;
     z-index: 1001; }
   .searchForm__btn {
@@ -746,6 +758,7 @@ a.logo {
     position: absolute;
     right: 0;
     top: 0;
+    z-index: 1002;
     width: 37px;
     height: 36px;
     background: #fff;

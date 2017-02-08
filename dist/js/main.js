@@ -80,10 +80,23 @@ $(function() {
 	/*********************************************************/
 						/* START EXPLANATIONS  */
 	/********************************************************/
-			$(".js-explanations").click(function(event) {
-			  event.preventDefault();
-			  $(this).next('div.explanations').slideToggle("fast");
+			
+
+
+			$(".js-explanations").mouseenter(function() {
+			  $(this).next('div.explanations').fadeIn("fast");
 			});
+
+			$(".countList__text").mouseleave(function() {
+			  $(this).find('div.explanations').fadeOut("fast");
+			});
+
+			if(!device.desktop()) {
+				$('div.explanations').addClass("withCloze");
+				$(".ex-cloze").click(function() {
+				  $(this).parent('div.explanations').fadeOut("fast");
+				});
+			}
 	/*********************************************************/
 						/* END EXPLANATIONS  */
 	/********************************************************/

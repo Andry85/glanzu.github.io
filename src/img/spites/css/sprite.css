@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 2.5em 4.6em;
+    background-size: 2.5em 10.5em;
 }
 
 .no-svg .icon:before {
@@ -26,10 +26,37 @@
 
 
 
-  .icon.profile:before {
+  .icon.cloze:before {
       background-position: 0em -2.3em;
+      width: 1.5em;
+      height: 1.5em;
+  }
+
+
+
+
+  .icon.profile:before {
+      background-position: 0em -3.8em;
       width: 2.2em;
       height: 2.3em;
+  }
+
+
+
+
+  .icon.star:before {
+      background-position: 0em -6.1em;
+      width: 2.178em;
+      height: 2.2em;
+  }
+
+
+
+
+  .icon.star-default:before {
+      background-position: 0em -8.3em;
+      width: 2.1780999999999997em;
+      height: 2.2em;
   }
 
 

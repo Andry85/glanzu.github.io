@@ -33,7 +33,7 @@ body {
 	position: fixed;
 	left: 50%;
 	top: 0;
-	z-index: 10;
+	z-index: 1100;
 	margin-left: -667.5px;
 	&__col1 {
 		background: url(../img/header__col1-bg.png) no-repeat;
@@ -365,7 +365,7 @@ a.logo {
 		padding: 10px;
 	}
 	&__rating {
-		padding: 6px 10px 10px 10px;
+		padding: 8px 10px 10px 10px;
 	}	
 	&__results {
 		padding: 10px 20px 30px 20px;
@@ -395,7 +395,7 @@ a.logo {
 		float: left;
 		color: #677887;
 		text-align: center;
-		padding: 5px 0 0 0;
+		padding: 7px 0 0 0;
 	}
 	&__img {
 		position: absolute;
@@ -461,7 +461,7 @@ a.logo {
 			width: 39.06%;
 			float: right;
 			.chosen-container-single {
-				.chosen-single {margin: 0;}
+				.chosen-single {margin: 0; padding-left: 12px;}
 				.chosen-search {padding: 10px 4px;}
 			}
 			.chosen-container .chosen-results {margin: 0 4px 4px 0; padding-left: 4px;}
@@ -477,11 +477,16 @@ a.logo {
 		position: relative;
 		width: 60.16%;
 		float: left;
-		padding: 6px 10px 0 0;
+		padding: 7px 10px 0 0;
 		text-align: right;
 		font-size: 15px;
-		&>a {color: #495059; border-bottom: 1px dashed #a0a4a9; text-decoration: none;}
-		&>a:hover {text-decoration: none; border-bottom: 0;}
+	}
+	&__choose {
+		cursor: pointer;
+		color: #495059; 
+		border-bottom: 1px dashed #a0a4a9; 
+		font-style: normal;
+		&:hover {border-bottom: 0;}
 	}
 }
 
@@ -501,6 +506,16 @@ a.logo {
 		display: block;
 		line-height: 1.2;
 	}
+	.ex-cloze {
+		display: none;
+		background: url(../img/svgicons/cloze.svg) no-repeat;
+		width: 15px;
+		height: 15px;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+		cursor: pointer;
+	}
 	&:before  {
 		content: "";
 		width: 34px;
@@ -511,6 +526,9 @@ a.logo {
 		top: -22px;
 		margin-left: -17px;
     }
+    &.withCloze {
+		.ex-cloze {display: block;}
+	}
 
 
 }
@@ -522,8 +540,8 @@ a.logo {
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 0 0 11px;
-		a {color: #8e9297; position: relative;}
-		a.rating__link--more {top: 2px;}
+		a {color: #4c5159; position: relative;}
+		a.rating__link--more {top: 1px;}
 	}
 	
 }
@@ -533,7 +551,7 @@ a.logo {
 	background: #da6797;
 	@include border-radius(3px);
 	color: #fff;
-	padding: 6px 21px;
+	padding: 6px 16px;
 	line-height: 1.48;
 	display:inline-block;
 	text-align:center;
@@ -587,14 +605,14 @@ a.logo {
 		padding: 14px 18px;
 		box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.35);
 		position: absolute;
-		min-width: 192px;
+		white-space: nowrap;
 		left: 254px;
 		top: -18px;
 		z-index: 100;
-		&.noResult {min-width: 411px;}
 		p {
 			margin: 0;
 			a {
+				text-decoration: none;
 				border-bottom: 1px dashed;
 				&:hover {
 					text-decoration: none;
@@ -617,7 +635,7 @@ a.logo {
 	&__count {
 		position: absolute;
 		right: 0;
-		top: 0;
+		top: -2px;
 		color: #8e9297;
 	}
 }
@@ -629,7 +647,7 @@ a.logo {
 		+ label {cursor: pointer;}
 		&:not(checked) {position: absolute; opacity: 0;}
 		&:not(checked) + label {position: relative; padding: 0 45px 0 25px; display: block; line-height: 1.2; overflow: hidden;}
-		&:not(checked) + label:before {content: ''; background: url(../img/checkbox-small-bg.png) no-repeat; width: 17px; height: 17px; position: absolute; left: 0; top: 1px;}
+		&:not(checked) + label:before {content: ''; background: url(../img/checkbox-small-bg.png) no-repeat; width: 17px; height: 17px; position: absolute; left: 0; top: 0px;}
 		&:not(checked) + label:hover:before {background: url(../img/checkbox-small-bg-hover.png) no-repeat;}
 		&:checked + label:before {background: url(../img/checkbox-small-checked-bg.png) no-repeat;}
 		&:checked + label:hover:before {background: url(../img/checkbox-small-checked-bg-hover.png) no-repeat;}
@@ -639,13 +657,13 @@ a.logo {
 
 
 .star {
-	background: url(../img/mx.png) -400px 0 no-repeat;
+	background: url(../img/svgicons/star.svg) no-repeat;
 	width: 21px;
 	height: 21px;
 	display: inline-block;
 	vertical-align: middle;
 }
-.star-default {background-position: -400px -21px;}
+.star-default {background-image: url(../img/svgicons/star-default.svg);}
 
 .searchForm {
 	background: #fff;
@@ -656,9 +674,9 @@ a.logo {
 		.searchForm__btn {border-color: #999da0;}
 	}
 	&__field[type="text"] {
-		font-size: 14px;
 		position: relative;
 		z-index: 1001;
+		
 	}
 	&__btn {
 		border: 1px solid #c4ccd5;
@@ -666,6 +684,7 @@ a.logo {
 		position: absolute;
 		right: 0;
 		top: 0;
+		z-index: 1002;
 		width: 37px;
 		height: 36px;
 		background: #fff;
@@ -769,6 +788,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 			background-position: -150px 0px;
 		}
 	}
+
+
     
 }
 
