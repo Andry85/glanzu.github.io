@@ -522,37 +522,6 @@ a.logo {
 
 .chosen-wrap {
   position: relative; }
-  .chosen-wrap:before {
-    display: none;
-    content: "";
-    border: 1px solid #c4ccd5;
-    -webkit-border-radius: 2px;
-            border-radius: 2px;
-    width: auto;
-    height: 34px;
-    background: #fff url(../img/select-bg.png) no-repeat 96% 16px;
-    margin: 0 10px -36px 10px;
-    display: block;
-    overflow: hidden; }
-  .chosen-wrap select {
-    width: 100%;
-    height: 34px;
-    padding: 0 36px 0 24px;
-    color: #a0a3a7;
-    border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none; }
-    .chosen-wrap select option {
-      color: #a0a3a7;
-      font-family: 'PTSans-Regular', sans-serif;
-      font-size: 15px; }
-  .chosen-wrap select:focus {
-    outline: none; }
 
 .countList:before, .countList:after {
   content: "";
@@ -583,8 +552,6 @@ a.logo {
       margin-left: 0;
       margin-right: 0;
       background-position: 76% 16px; }
-    .countList__item .chosen-wrap select {
-      padding: 0 14px; }
 
 .countList__text {
   position: relative;

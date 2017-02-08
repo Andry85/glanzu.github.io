@@ -63,6 +63,14 @@ $(function() {
 						/* Start CUSTOM SELECT  */
 	/********************************************************/
         $(".chosen-select").chosen();
+        // Chosen touch support.
+	    if ($('.chosen-container').length > 0) {
+	      $('.chosen-container').on('touchstart', function(e){
+	        e.stopPropagation(); e.preventDefault();
+	        // Trigger the mousedown event.
+	        $(this).trigger('mousedown');
+	      });
+	    }
     /*********************************************************/
 						/* End CUSTOM SELECT  */
 	/********************************************************/ 
