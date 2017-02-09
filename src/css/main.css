@@ -112,7 +112,8 @@ textarea {
   padding: 6px 12px;
   color: #4c5159;
   width: 100%;
-  height: 36px; }
+  height: 36px;
+  -webkit-appearance: none; }
 
 textarea {
   resize: vertical; }
@@ -127,6 +128,9 @@ input[type=email]:hover,
 input[type=search]:hover,
 textarea:hover {
   border-color: #999da0; }
+
+:focus {
+  outline: 0; }
 
 body {
   background: #e1c298 url(../img/body-bg.png);
@@ -406,26 +410,6 @@ a.logo {
 
 .filter__location {
   padding: 10px; }
-  .filter__location .chosen-container-single .chosen-search:before {
-    content: "";
-    width: 11px;
-    height: 16px;
-    background: url("../img/mx.png") no-repeat -227px 0px;
-    position: absolute;
-    left: 21px;
-    top: 19px; }
-  .filter__location .chosen-container-single .chosen-search input[type="text"] {
-    padding-left: 32px; }
-  .filter__location .chosen-container-single .chosen-single {
-    padding-left: 32px; }
-    .filter__location .chosen-container-single .chosen-single:before {
-      content: "";
-      width: 11px;
-      height: 16px;
-      background: url("../img/mx.png") no-repeat -227px 0px;
-      position: absolute;
-      left: 10px;
-      top: 8px; }
 
 .filter__count {
   padding: 10px 20px; }
@@ -474,9 +458,6 @@ a.logo {
   .calendar__field[type="text"] {
     padding-right: 24px; }
 
-.chosen-wrap {
-  position: relative; }
-
 .countList:before, .countList:after {
   content: "";
   display: table; }
@@ -491,27 +472,12 @@ a.logo {
   margin-left: 5.18%; }
   .countList__item:first-child {
     margin-left: 0; }
-  .countList__item .chosen-wrap {
-    width: 39.06%;
-    float: right; }
-    .countList__item .chosen-wrap .chosen-container-single .chosen-single {
-      margin: 0;
-      padding-left: 12px; }
-    .countList__item .chosen-wrap .chosen-container-single .chosen-search {
-      padding: 10px 4px; }
-    .countList__item .chosen-wrap .chosen-container .chosen-results {
-      margin: 0 4px 4px 0;
-      padding-left: 4px; }
-    .countList__item .chosen-wrap:before {
-      margin-left: 0;
-      margin-right: 0;
-      background-position: 76% 16px; }
 
 .countList__text {
   position: relative;
-  width: 60.16%;
+  width: 53.13%;
   float: left;
-  padding: 7px 10px 0 0;
+  padding: 7px 0 0 0;
   text-align: right;
   font-size: 15px; }
 
@@ -522,6 +488,11 @@ a.logo {
   font-style: normal; }
   .countList__choose:hover {
     border-bottom: 0; }
+
+.countList .chosen-wrap {
+  width: 54.69%;
+  float: right;
+  margin-right: -10px; }
 
 .explanations {
   display: none;

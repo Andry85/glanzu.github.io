@@ -329,34 +329,6 @@ a.logo {
 .filter {
 	&__location {
 		padding: 10px;
-		.chosen-container-single {
-			.chosen-search {
-			 	&:before  {
-			      content: "";
-			      width: 11px;
-			      height: 16px;
-			      background: url('../img/mx.png') no-repeat -227px 0px;
-			      position: absolute;
-			      left: 21px;
-			      top: 19px;
-			    }
-			}
-			.chosen-search input[type="text"] {
-				padding-left: 32px;
-			}
-			.chosen-single {
-				padding-left: 32px;
-				&:before  {
-			      content: "";
-			      width: 11px;
-			      height: 16px;
-			      background: url('../img/mx.png') no-repeat -227px 0px;
-			      position: absolute;
-			      left: 10px;
-			      top: 8px;
-			    }
-			}
-		}
 	}
 	&__count {
 		padding: 10px 20px;
@@ -410,7 +382,6 @@ a.logo {
 }
 
 
-.chosen-wrap  {position: relative;}
 
 .countList {
 	&:before,&:after {content: ""; display: table;}
@@ -421,26 +392,12 @@ a.logo {
 		position: relative;
 		margin-left: 5.18%;
 		&:first-child {margin-left: 0;}
-		.chosen-wrap {
-			width: 39.06%;
-			float: right;
-			.chosen-container-single {
-				.chosen-single {margin: 0; padding-left: 12px;}
-				.chosen-search {padding: 10px 4px;}
-			}
-			.chosen-container .chosen-results {margin: 0 4px 4px 0; padding-left: 4px;}
-			&:before  {
-		      margin-left: 0;
-		      margin-right: 0;
-		      background-position: 76% 16px;
-		    }
-		}
 	}
 	&__text {
 		position: relative;
-		width: 60.16%;
+		width: 53.13%;
 		float: left;
-		padding: 7px 10px 0 0;
+		padding: 7px 0 0 0;
 		text-align: right;
 		font-size: 15px;
 	}
@@ -450,6 +407,11 @@ a.logo {
 		border-bottom: 1px dashed #a0a4a9; 
 		font-style: normal;
 		&:hover {border-bottom: 0;}
+	}
+	.chosen-wrap {
+		width: 54.69%;
+		float: right;
+		margin-right: -10px;
 	}
 }
 

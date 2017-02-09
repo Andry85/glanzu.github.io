@@ -62,15 +62,11 @@ $(function() {
 	/*********************************************************/
 						/* Start CUSTOM SELECT  */
 	/********************************************************/
-        $(".chosen-select").chosen();
-        // Chosen touch support.
-	    if ($('.chosen-container').length > 0) {
-	      $('.chosen-container').on('touchstart', function(e){
-	        e.stopPropagation(); e.preventDefault();
-	        // Trigger the mousedown event.
-	        $(this).trigger('mousedown');
-	      });
-	    }
+    	$(".chosen-select").select2(); 
+    	
+    	$(".classic-select").select2({
+		   theme: "classic"
+		});
     /*********************************************************/
 						/* End CUSTOM SELECT  */
 	/********************************************************/ 
