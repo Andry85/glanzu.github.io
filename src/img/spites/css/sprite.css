@@ -8,7 +8,7 @@
     display: inline-block;
     background-image: url("../svg/sprite.svg");
     background-repeat: no-repeat;
-    background-size: 2.5em 10.5em;
+    background-size: 3.7600000000000002em 16.6em;
 }
 
 .no-svg .icon:before {
@@ -28,15 +28,24 @@
 
   .icon.cloze:before {
       background-position: 0em -2.3em;
-      width: 1.5em;
-      height: 1.5em;
+      width: 3.7600000000000002em;
+      height: 3.8em;
+  }
+
+
+
+
+  .icon.cloze-hover:before {
+      background-position: 0em -6.1em;
+      width: 3.7600000000000002em;
+      height: 3.8em;
   }
 
 
 
 
   .icon.profile:before {
-      background-position: 0em -3.8em;
+      background-position: 0em -9.9em;
       width: 2.2em;
       height: 2.3em;
   }
@@ -45,7 +54,7 @@
 
 
   .icon.star:before {
-      background-position: 0em -6.1em;
+      background-position: 0em -12.2em;
       width: 2.18em;
       height: 2.2em;
   }
@@ -54,7 +63,7 @@
 
 
   .icon.star-default:before {
-      background-position: 0em -8.3em;
+      background-position: 0em -14.4em;
       width: 2.18em;
       height: 2.2em;
   }

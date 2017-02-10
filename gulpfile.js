@@ -80,6 +80,11 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 });
 
+gulp.task('css', function() {
+  return gulp.src('src/css/*/**')
+  .pipe(gulp.dest('dist/css'))
+});
+
 
 gulp.task('js', function() {
   return gulp.src('src/js/**/*')
@@ -98,6 +103,6 @@ gulp.task('default', function (callback) {
 
 
 gulp.task('build', function (callback) {
-  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts'], callback)
+  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'css'], callback)
 });
 

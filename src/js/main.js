@@ -63,10 +63,22 @@ $(function() {
 						/* Start CUSTOM SELECT  */
 	/********************************************************/
     	$(".chosen-select").select2(); 
-    	
     	$(".classic-select").select2({
 		   theme: "classic"
 		});
+
+		$(".nosearch-select").select2(
+		{
+			theme: "nosearch",
+			minimumResultsForSearch: Infinity
+		});
+
+		$(".nosearchFull-select").select2(
+		{
+			theme: "nosearchFull",
+			minimumResultsForSearch: Infinity
+		});
+
     /*********************************************************/
 						/* End CUSTOM SELECT  */
 	/********************************************************/ 
@@ -84,9 +96,6 @@ $(function() {
 	/*********************************************************/
 						/* START EXPLANATIONS  */
 	/********************************************************/
-			
-
-
 			$(".js-explanations").mouseenter(function() {
 			  $(this).next('div.explanations').fadeIn("fast");
 			});
@@ -97,6 +106,7 @@ $(function() {
 
 			if(!device.desktop()) {
 				$('div.explanations').addClass("withCloze");
+				$('div.explanations').append('<i class="ex-cloze">');
 				$(".ex-cloze").click(function() {
 				  $(this).parent('div.explanations').fadeOut("fast");
 				});
@@ -118,6 +128,20 @@ $(function() {
 			});
 	/*********************************************************/
 						/* END FOUND RESULT  */
+	/********************************************************/
+
+	/*********************************************************/
+						/* START NOTICE  */
+	/********************************************************/
+			$(".calendar__field").click(function() {
+			  $(this).parent().children('div.notice').fadeIn("fast");
+			  $(this).attr( disabled, disabled );
+			});
+			$(".notice-cloze").click(function() {
+			  $(this).parent('div.notice').fadeOut("fast");
+			});
+	/*********************************************************/
+						/* END NOTICE  */
 	/********************************************************/
 
 

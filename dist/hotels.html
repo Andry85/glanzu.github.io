@@ -9,6 +9,7 @@
 <meta name="keywords" content="">
 <meta name="description" content="">
 <link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/base/jquery.ui.all.css">
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -119,14 +120,20 @@
                             </div>
 						</div>
 						<div class="calendar">
-							<div class="calendar__data">
-								<input class="calendar__field" type="text" placeholder="Дата заезда">
-								<img class="calendar__img" src="img/calendar.png" alt="" title="">
+							<div id="start-date" class="calendar__data">
+								<input class="calendar__field" type="text" id="datepicker" placeholder="Дата заезда">
+								<div class="notice">
+									<i class="notice-cloze"></i>
+									<span>Дата заезда не может быть позже даты выезда</span>
+								</div>
 							</div>
 							<div class="calendar__line">-</div>
 							<div class="calendar__data">
-								<input class="calendar__field" type="text" placeholder="Дата выезда">
-								<img class="calendar__img" src="img/calendar.png" alt="" title="">
+								<input class="calendar__field" type="text" id="datepicker-1" placeholder="Дата выезда">
+								<div class="notice">
+									<i class="notice-cloze"></i>
+									<span>Дата заезда не может быть позже даты выезда</span>
+								</div>
 							</div>
 						</div>
 						<div class="filter__count">
@@ -134,7 +141,7 @@
 								<li class="countList__item">
 									<div class="countList__text">Взрослых</div>
 									<div class="chosen-wrap">
-		                                <select class="chosen-select" style="width: 100%">
+		                                <select class="nosearch-select" style="width: 100%">
 		                                    <option selected value="0">1</option>
 		                                    <option value="1">2</option>
 		                                    <option value="2">3</option>
@@ -152,12 +159,11 @@
 									<div class="countList__text">
 										<i class="countList__choose js-explanations">Детей</i>
 										<div class="explanations">
-											<i class="ex-cloze"></i>
 											<span>Туристы считаются детьми до 17 лет.  От 18 - взрослыми.</span>
 										</div>
 									</div>
 									<div class="chosen-wrap">
-		                                <select class="chosen-select" style="width: 100%">
+		                                <select class="nosearch-select" style="width: 100%">
 		                                    <option selected value="0">0</option>
 		                                    <option value="1">1</option>
 		                                    <option value="2">2</option>
@@ -176,7 +182,7 @@
 						</div>
 						<div class="filter__price">
 							<div class="chosen-wrap">
-                                <select class="chosen-select" style="width: 100%">
+                                <select class="nosearchFull-select" style="width: 100%">
                                     <option selected value="0">До 6 500 р.</option>
                                     <option value="1">До 7 500 р.</option>
                                     <option value="2">До 8 500 р.</option>
@@ -366,5 +372,6 @@
 	<script src="js/device.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/search_content.js"></script>
+	<script src="js/datapic.js"></script>
 </body>
 </html>
