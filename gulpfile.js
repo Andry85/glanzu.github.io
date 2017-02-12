@@ -80,6 +80,11 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 });
 
+gulp.task('uploads', function() {
+  return gulp.src('src/uploads/**/*')
+  .pipe(gulp.dest('dist/uploads'))
+});
+
 gulp.task('css', function() {
   return gulp.src('src/css/*/**')
   .pipe(gulp.dest('dist/css'))
@@ -92,7 +97,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('clean:dist', function(callback){
-  del(['dist/**/*', '!dist/img', '!dist/img/**/*','!dist/fonts', '!dist/fonts/**/*','!dist/js', '!dist/js/**/*'], callback)
+  del(['dist/**/*', '!dist/img', '!dist/img/**/*','!dist/fonts', '!dist/fonts/**/*', '!dist/uploads', '!dist/uploads/**/*', '!dist/js', '!dist/js/**/*'], callback)
 });
 
 gulp.task('default', function (callback) {
@@ -103,6 +108,6 @@ gulp.task('default', function (callback) {
 
 
 gulp.task('build', function (callback) {
-  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'css'], callback)
+  runSequence(['clean:dist', 'sass', 'useref', 'images', 'js', 'fonts', 'css', 'uploads'], callback)
 });
 

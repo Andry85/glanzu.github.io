@@ -6,6 +6,7 @@
 
 body {
 	background: $bg-color url(../img/body-bg.png);
+	min-width: 1024px;
 	background-attachment: fixed;
 	font: {
 	    family: 'PTSans-Regular', sans-serif;
@@ -317,9 +318,14 @@ a.logo {
 /* MAIN SECTION */
 .main {margin: 43px 0 0 0;}
 .sidebar {
+	float: left;
 	border-right: 1px solid #d6d9de;
 	font-size: 15px;
 	width: 311px;
+    margin-left: -100%;
+    position: relative;
+
+
 	&__title {
 		margin: 0;
 		padding: 20px 20px 6px 20px;
@@ -371,6 +377,8 @@ a.logo {
 	}
 	&__field[type="text"] {
 		padding-right: 24px;
+		@include border-radius(4px);
+		cursor: pointer;
 	}
 }
 
@@ -464,7 +472,7 @@ a.logo {
 		display: inline-block;
 		vertical-align: middle;
 		padding: 0 0 0 11px;
-		a {color: #4c5159; position: relative;}
+		a {color: #8e9297; position: relative;}
 		a.rating__link--more {top: 1px;}
 	}
 	
@@ -475,11 +483,12 @@ a.logo {
 	background: #da6797;
 	@include border-radius(3px);
 	color: #fff;
-	padding: 6px 16px;
+	padding: 7px 22px;
 	line-height: 1.48;
 	display:inline-block;
 	text-align:center;
 	font-size: 15px;
+	font-family: 'PTSans-Regular';
 	white-space:nowrap;
 	vertical-align:middle;
 	-ms-touch-action:manipulation;
@@ -491,8 +500,11 @@ a.logo {
 	background-image:none;
 	overflow: vissible;
 	&:hover {background: #cc5b8a;}
-	&:disabled {background: #eccbdb;}
+	&:disabled {background: #f5cbdc;}
+	&.bnt--repl {background: #0097ad;}
+	&.bnt--repl:hover {background: #008da1;}
 }
+
 
 
 
@@ -503,7 +515,7 @@ a.logo {
 		max-width: 50.74%;
 		float: left;
 		margin: 0;
-		padding: 8px 0 0 0;
+		padding: 7px 0 0 4px;
 	}
 	&__counts {color: #e76c95;}
 	.bnt {float: right;}
@@ -681,18 +693,42 @@ a.logo {
 
 
 // EXCURSIONS PAGE
+.container {
+	    width: 100%;
+    	float: left;
+    	overflow: hidden;
+
+}
+
+.page {
+	margin: 0 0 0 310px;
+	border-left: 1px solid #d6d9de;
+	padding: 0 32px;
+}
+
+.catalog {
+	&__header {
+		&:before,&:after {content: ""; display: table;}
+		&:after {clear: both;}
+
+	}
+	&__title {float: left; margin: 0;}
+	&__filter {float: right;}
+}
+
 
 
 
 
 /* RESPONSIVE */
 @media only screen and (max-width: 1359px) {
-	.wrapper {width: 1024px;}
+	.wrapper {width: 100%;}
 
 
 	.header {
-		width: 1024px;
- 		margin-left: -512px;
+		width: 100%;
+ 		margin-left: 0;
+ 		left: 0;
 		&__col1 {
 			width: 24.61%;
 		}
