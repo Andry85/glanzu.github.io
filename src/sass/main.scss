@@ -367,6 +367,7 @@ a.logo {
 		width: 47.41%;
 		float: left;
 		position: relative;
+		
 	}
 	&__line {
 		width: 5.18%;
@@ -378,17 +379,14 @@ a.logo {
 	&__field[type="text"] {
 		padding-right: 24px;
 		@include border-radius(4px);
+		background-image: url(../img/calendar.png);
+		background-repeat: no-repeat;
+		background-position: 90% 11px;
 		cursor: pointer;
 	}
+
 }
 
-.ui-datepicker-trigger {
-	position: absolute;
-	right: 12px;
-	top: 13px;
-	z-index: 10;
-	cursor: pointer;
-}
 
 
 .countList {

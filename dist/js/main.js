@@ -131,18 +131,17 @@ $(function() {
 	/********************************************************/
 
 	/*********************************************************/
-						/* START NOTICE  */
+						/* START CALENDAR  */
 	/********************************************************/
-			$(".calendar__field").click(function() {
-			  $(this).parent().children('div.notice').fadeIn("fast");
-			  $(this).attr( disabled, disabled );
-			});
-			$(".notice-cloze").click(function() {
-			  $(this).parent('div.notice').fadeOut("fast");
-			});
+		$("#datepicker,#datepicker-1").datepicker();
 	/*********************************************************/
-						/* END NOTICE  */
+						/* END CALENDAR  */
 	/********************************************************/
+
+
+			
+
+
 
 
 	
