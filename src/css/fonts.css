@@ -1,6 +1,8 @@
 /* --------------------- 
 FONTS CONNECTION
 --------------------- */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
 @font-face {
   font-family: 'GothamProNarrow-Bold';
   src: url('../fonts/GothamProNarrow-Bold.eot?#iefix') format('embedded-opentype'),  
@@ -39,6 +41,8 @@ FONTS CONNECTION
   font-weight: normal;
   font-style: normal;
 }
+
+
 
 
 
