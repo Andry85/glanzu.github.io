@@ -749,24 +749,24 @@ a.logo {
 	}
 	&__body {
 		padding: 26px 0 0 0;
+		overflow: hidden;
 	}
 }
 
 .catalogList {
+	margin: 0 0 0 -30px;
+	&:before,&:after {content: ""; display: table;}
+	&:after {clear: both;}
 	&__item {
-		width: 31.25%;
+		width: 300px;
 		float: left;
-		margin: 0 0 30px 3.125%;
+		margin: 0 0 30px 30px;
 		position: relative;
-	}
-	&__item:nth-child(3n+1) {margin-left: 0;}
-	&__box {	
 	}
 	&__pic {
 		@include border-radius(2px);
 	}
 	&__rate {
-		
 		width: 32px;
 		height: 32px;
 		position: absolute;
@@ -894,6 +894,19 @@ a.logo {
 			.rollMenu {display: inline-block;}
 		}
 	}
+
+	.catalog {
+		padding: 0 0 0 29px;
+		&__filter {
+			float: none;
+			padding: 15px 0 3px 0;
+		}
+		&__title {
+			float: none;
+		}
+		&__item:first-child {padding-left: 0;}
+	}
+	.page {padding-right: 21px;}
 
 
 
