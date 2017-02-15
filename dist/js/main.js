@@ -5,7 +5,7 @@ $(function() {
 	/********************************************************/
 			$(".js--currencies,.nav__link--curr").click(function(event) {
 			  event.preventDefault();
-			  $(this).next('ul').slideToggle("slow");
+			  $(this).next('ul').slideToggle("fast");
 			});
 	/*********************************************************/
 						/* END CURRENCIES DROP-DOWN LIST  */
